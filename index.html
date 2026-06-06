@@ -35,7 +35,6 @@ body::before {
 .hero {
     padding: 120px 20px 80px;
     text-align: center;
-    position: relative;
 }
 
 .logo {
@@ -56,12 +55,12 @@ h3 {
     text-shadow: 0 0 12px #00d9ff;
 }
 
-/* معرفی */
+/* معرفی (اصلاح‌شده) */
 .section {
     padding: 25px 20px;
     text-align: center;
-    font-size: 24px;
-    line-height: 1.8;
+    font-size: 34px; /* بزرگ شد */
+    line-height: 1.5; /* فاصله کمتر شد */
     width: 90%;
     margin: auto;
 }
@@ -163,15 +162,39 @@ footer {
     font-size: 18px;
     box-shadow: 0 -5px 25px #8f5bff55;
 }
+
+/* دکمه پلی آهنگ */
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background: #8f5bff;
+    padding: 15px 22px;
+    border-radius: 50px;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 20px #8f5bff;
+}
 </style>
 </head>
 
 <body>
 
-<!-- آهنگ -->
-<audio autoplay loop>
+<!-- آهنگ با تاچ پلی/پاز -->
+<audio id="music" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
+
+<div class="music-btn" onclick="toggleMusic()">🎵 پخش / توقف</div>
+
+<script>
+function toggleMusic() {
+    var m = document.getElementById("music");
+    if (m.paused) m.play();
+    else m.pause();
+}
+</script>
 
 <!-- هدر -->
 <div class="hero">
@@ -180,7 +203,7 @@ footer {
     <h3>تجهیزات آزمایشگاهی • سکوبندی • مواد مصرفی</h3>
 </div>
 
-<!-- معرفی -->
+<!-- معرفی (اصلاح‌شده) -->
 <div class="section">
     شرکت <strong>ارشا تجهیز آزما</strong> با سال‌ها تجربه در تأمین تجهیزات آزمایشگاهی و سکوبندی،
     یکی از معتبرترین مجموعه‌های تخصصی در کشور است.
