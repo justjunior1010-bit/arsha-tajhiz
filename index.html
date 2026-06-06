@@ -76,7 +76,7 @@ h1 {
 }
 
 h3 {
-    font-size: 26px;
+    font-size: 30px;
     opacity: 0.9;
     text-shadow: 0 0 15px #00d9ff;
 }
@@ -85,9 +85,30 @@ h3 {
 .section {
     padding: 50px 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 28px;
     line-height: 2.2;
     animation: fadeIn 1.5s ease;
+}
+
+/* ------------------ بخش ویژگی‌ها ------------------ */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    width: 280px;
+    background: #111;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 0 30px #8f5bff55;
+    border-right: 5px solid #8f5bff;
+    border-left: 5px solid #00d9ff;
 }
 
 /* ------------------ باکس تضمین ------------------ */
@@ -104,19 +125,59 @@ h3 {
 }
 
 .guarantee h2 {
-    font-size: 28px;
+    font-size: 34px;
     color: #8f5bff;
     text-shadow: 0 0 15px #8f5bff;
 }
 
-/* ------------------ پخش آهنگ ------------------ */
-audio {
-    display: none;
+/* ------------------ بخش تماس با ما ------------------ */
+.contact-box {
+    width: 85%;
+    margin: 50px auto;
+    padding: 35px;
+    background: #111;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px #8f5bff55;
+    border-right: 5px solid #8f5bff;
+    border-left: 5px solid #00d9ff;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
+.contact-box h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #8f5bff;
+    text-shadow: 0 0 15px #8f5bff;
+}
+
+.contact-btn {
+    display: block;
+    margin: 15px auto;
+    padding: 18px;
+    width: 80%;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.call {
+    background: linear-gradient(90deg, #6a00ff, #00c8ff);
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.insta {
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #8f5bff;
 }
 
 /* ------------------ فوتر ------------------ */
@@ -126,8 +187,13 @@ footer {
     text-align: center;
     padding: 25px;
     margin-top: 50px;
-    font-size: 15px;
+    font-size: 20px;
     box-shadow: 0 -5px 25px #8f5bff55;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
@@ -148,34 +214,26 @@ footer {
     ما <strong>کیفیت</strong>، اصالت کالا و پشتیبانی واقعی را اصل کار خود قرار داده‌ایم.
 </div>
 
+<!-- ------------------ ویژگی‌ها ------------------ -->
+<div class="features">
+    <div class="feature-box">✔️ کیفیت تضمینی</div>
+    <div class="feature-box">✔️ بهترین قیمت</div>
+    <div class="feature-box">✔️ پشتیبانی واقعی</div>
+</div>
+
 <!-- ------------------ تضمین ------------------ -->
 <div class="guarantee">
     <h2>🔥 تمایز ما نسبت به دیگران تضمین <strong>قیمت</strong> و <strong>کیفیت</strong> ماست</h2>
 </div>
 
-<!-- ------------------ آهنگ ------------------ -->
-<audio id="bgmusic" autoplay playsinline muted>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
+<!-- ------------------ تماس با ما ------------------ -->
+<div class="contact-box">
+    <h2>تماس با ما</h2>
 
-<script>
-const music = document.getElementById("bgmusic");
-
-// تلاش اول برای پخش
-music.play().then(() => {
-    setTimeout(() => {
-        music.muted = false;
-    }, 1200);
-}).catch(() => {
-    // اگر مرورگر اجازه نداد، با اولین لمس پخش کن
-    document.body.addEventListener("click", () => {
-        music.play();
-        setTimeout(() => {
-            music.muted = false;
-        }, 500);
-    }, { once: true });
-});
-</script>
+    <a class="contact-btn call" href="tel:09120000000">📞 تماس مستقیم</a>
+    <a class="contact-btn whatsapp" href="https://wa.me/989120000000">💬 واتساپ</a>
+    <a class="contact-btn insta" href="https://instagram.com/yourpage">📸 اینستاگرام</a>
+</div>
 
 <!-- ------------------ فوتر ------------------ -->
 <footer>
