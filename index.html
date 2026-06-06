@@ -5,7 +5,6 @@
 <title>ارشا تجهیز آزما</title>
 
 <style>
-/* ------------------ تنظیمات کلی ------------------ */
 body {
     margin: 0;
     font-family: "IRANSans", sans-serif;
@@ -14,7 +13,7 @@ body {
     color: #fff;
 }
 
-/* ------------------ پس‌زمینه نئونی ------------------ */
+/* پس‌زمینه نئونی */
 body::before {
     content: "";
     position: fixed;
@@ -32,109 +31,84 @@ body::before {
     100% { transform: scale(1.3); opacity: 1; }
 }
 
-/* ------------------ هدر ------------------ */
+/* هدر */
 .hero {
-    padding: 140px 20px;
+    padding: 120px 20px 80px;
     text-align: center;
     position: relative;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(135deg, #6a00ff33, #00c8ff33);
-    filter: blur(60px);
-    animation: glowMove 5s infinite alternate;
-    z-index: -1;
-}
-
-@keyframes glowMove {
-    0% { transform: translateX(-10%) translateY(-10%); }
-    100% { transform: translateX(10%) translateY(10%); }
-}
-
-/* ------------------ لوگو ------------------ */
 .logo {
-    width: 260px;
-    filter: drop-shadow(0 0 25px #8f5bff) drop-shadow(0 0 45px #00d9ff);
-    animation: pulse 3s infinite ease-in-out;
+    width: 240px;
+    filter: drop-shadow(0 0 25px #8f5bff);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); filter: drop-shadow(0 0 20px #8f5bff); }
-    50% { transform: scale(1.08); filter: drop-shadow(0 0 45px #00d9ff); }
-    100% { transform: scale(1); filter: drop-shadow(0 0 20px #8f5bff); }
-}
-
-/* ------------------ متن‌ها ------------------ */
 h1 {
-    font-size: 55px;
-    margin-top: 25px;
-    text-shadow: 0 0 25px #8f5bff;
+    font-size: 48px;
+    margin-top: 20px;
+    text-shadow: 0 0 20px #8f5bff;
 }
 
 h3 {
-    font-size: 30px;
-    opacity: 0.9;
-    text-shadow: 0 0 15px #00d9ff;
+    font-size: 26px;
+    margin-top: 10px;
+    line-height: 1.6;
+    text-shadow: 0 0 12px #00d9ff;
 }
 
-/* ------------------ بخش معرفی ------------------ */
+/* معرفی */
 .section {
-    padding: 50px 20px;
+    padding: 30px 20px;
     text-align: center;
-    font-size: 28px;
-    line-height: 2.2;
-    animation: fadeIn 1.5s ease;
+    font-size: 24px;
+    line-height: 1.9;
+    width: 90%;
+    margin: auto;
 }
 
-/* ------------------ بخش ویژگی‌ها ------------------ */
+/* ویژگی‌ها */
 .features {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    padding: 40px 20px;
+    gap: 20px;
+    padding: 30px 20px;
     flex-wrap: wrap;
 }
 
 .feature-box {
-    width: 280px;
+    width: 260px;
     background: #111;
-    padding: 25px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 18px;
     text-align: center;
-    font-size: 24px;
-    box-shadow: 0 0 30px #8f5bff55;
+    font-size: 22px;
+    box-shadow: 0 0 25px #8f5bff55;
+    border-right: 4px solid #8f5bff;
+    border-left: 4px solid #00d9ff;
+}
+
+/* تضمین */
+.guarantee {
+    background: #111;
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 0 35px #8f5bff55;
     border-right: 5px solid #8f5bff;
     border-left: 5px solid #00d9ff;
 }
 
-/* ------------------ باکس تضمین ------------------ */
-.guarantee {
-    background: #111;
-    width: 75%;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px #8f5bff55;
-    border-right: 6px solid #8f5bff;
-    border-left: 6px solid #00d9ff;
-    animation: fadeIn 2s ease;
-}
-
 .guarantee h2 {
-    font-size: 34px;
-    color: #8f5bff;
-    text-shadow: 0 0 15px #8f5bff;
+    font-size: 30px;
+    text-shadow: 0 0 12px #8f5bff;
 }
 
-/* ------------------ بخش تماس با ما ------------------ */
+/* تماس با ما */
 .contact-box {
     width: 85%;
-    margin: 50px auto;
-    padding: 35px;
+    margin: 40px auto;
+    padding: 30px;
     background: #111;
     border-radius: 20px;
     text-align: center;
@@ -144,18 +118,17 @@ h3 {
 }
 
 .contact-box h2 {
-    font-size: 38px;
-    margin-bottom: 25px;
-    color: #8f5bff;
+    font-size: 34px;
+    margin-bottom: 20px;
     text-shadow: 0 0 15px #8f5bff;
 }
 
 .contact-btn {
     display: block;
-    margin: 15px auto;
-    padding: 18px;
+    margin: 12px auto;
+    padding: 16px;
     width: 80%;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
     border-radius: 15px;
     text-decoration: none;
@@ -180,62 +153,61 @@ h3 {
     box-shadow: 0 0 20px #8f5bff;
 }
 
-/* ------------------ فوتر ------------------ */
+/* فوتر */
 footer {
     background: #111;
     color: white;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-    font-size: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 18px;
     box-shadow: 0 -5px 25px #8f5bff55;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ------------------ هدر ------------------ -->
+<!-- آهنگ -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- هدر -->
 <div class="hero">
-    <img src="logo.jpg" class="logo" alt="لوگوی ارشا تجهیز آزما">
+    <img src="logo.jpg" class="logo">
     <h1>ارشا تجهیز آزما</h1>
     <h3>تجهیزات آزمایشگاهی • سکوبندی • مواد مصرفی</h3>
 </div>
 
-<!-- ------------------ معرفی ------------------ -->
+<!-- معرفی -->
 <div class="section">
     شرکت <strong>ارشا تجهیز آزما</strong> با سال‌ها تجربه در تأمین تجهیزات آزمایشگاهی و سکوبندی،
     یکی از معتبرترین مجموعه‌های تخصصی در کشور است.
     ما <strong>کیفیت</strong>، اصالت کالا و پشتیبانی واقعی را اصل کار خود قرار داده‌ایم.
 </div>
 
-<!-- ------------------ ویژگی‌ها ------------------ -->
+<!-- ویژگی‌ها -->
 <div class="features">
     <div class="feature-box">✔️ کیفیت تضمینی</div>
     <div class="feature-box">✔️ بهترین قیمت</div>
     <div class="feature-box">✔️ پشتیبانی واقعی</div>
 </div>
 
-<!-- ------------------ تضمین ------------------ -->
+<!-- تضمین -->
 <div class="guarantee">
-    <h2>🔥 تمایز ما نسبت به دیگران تضمین <strong>قیمت</strong> و <strong>کیفیت</strong> ماست</h2>
+    <h2>🔥 تمایز ما تضمین قیمت و کیفیت است</h2>
 </div>
 
-<!-- ------------------ تماس با ما ------------------ -->
+<!-- تماس با ما -->
 <div class="contact-box">
     <h2>تماس با ما</h2>
 
-    <a class="contact-btn call" href="tel:09120000000">📞 تماس مستقیم</a>
-    <a class="contact-btn whatsapp" href="https://wa.me/989120000000">💬 واتساپ</a>
-    <a class="contact-btn insta" href="https://instagram.com/yourpage">📸 اینستاگرام</a>
+    <a class="contact-btn call" href="tel:09127018262">📞 تماس مستقیم</a>
+    <a class="contact-btn whatsapp" href="https://wa.me/989127018262">💬 واتساپ</a>
+    <a class="contact-btn insta" href="https://instagram.com/arsha.tajhiz.azma">📸 اینستاگرام</a>
 </div>
 
-<!-- ------------------ فوتر ------------------ -->
 <footer>
     © 2026 ارشا تجهیز آزما — تمامی حقوق محفوظ است
 </footer>
