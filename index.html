@@ -33,7 +33,7 @@ body::before {
 
 /* هدر */
 .hero {
-    padding: 120px 20px 80px;
+    padding: 120px 20px 40px; /* فاصله کمتر شد */
     text-align: center;
 }
 
@@ -50,17 +50,17 @@ h1 {
 
 h3 {
     font-size: 26px;
-    margin-top: 10px;
-    line-height: 1.4;
+    margin-top: 5px; /* فاصله کمتر شد */
+    line-height: 1.3;
     text-shadow: 0 0 12px #00d9ff;
 }
 
 /* معرفی (اصلاح‌شده) */
 .section {
-    padding: 25px 20px;
+    padding: 10px 20px; /* فاصله کمتر شد */
     text-align: center;
-    font-size: 34px; /* بزرگ شد */
-    line-height: 1.5; /* فاصله کمتر شد */
+    font-size: 34px;
+    line-height: 1.5;
     width: 90%;
     margin: auto;
 }
@@ -162,38 +162,20 @@ footer {
     font-size: 18px;
     box-shadow: 0 -5px 25px #8f5bff55;
 }
-
-/* دکمه پلی آهنگ */
-.music-btn {
-    position: fixed;
-    bottom: 25px;
-    left: 25px;
-    background: #8f5bff;
-    padding: 15px 22px;
-    border-radius: 50px;
-    font-size: 22px;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 0 20px #8f5bff;
-}
 </style>
 </head>
 
 <body>
 
-<!-- آهنگ با تاچ پلی/پاز -->
+<!-- آهنگ -->
 <audio id="music" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<div class="music-btn" onclick="toggleMusic()">🎵 پخش / توقف</div>
-
 <script>
-function toggleMusic() {
-    var m = document.getElementById("music");
-    if (m.paused) m.play();
-    else m.pause();
-}
+document.body.addEventListener("click", function() {
+    document.getElementById("music").play();
+});
 </script>
 
 <!-- هدر -->
@@ -203,7 +185,7 @@ function toggleMusic() {
     <h3>تجهیزات آزمایشگاهی • سکوبندی • مواد مصرفی</h3>
 </div>
 
-<!-- معرفی (اصلاح‌شده) -->
+<!-- معرفی -->
 <div class="section">
     شرکت <strong>ارشا تجهیز آزما</strong> با سال‌ها تجربه در تأمین تجهیزات آزمایشگاهی و سکوبندی،
     یکی از معتبرترین مجموعه‌های تخصصی در کشور است.
